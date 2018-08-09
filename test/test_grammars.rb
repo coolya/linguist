@@ -5,44 +5,35 @@ class TestGrammars < Minitest::Test
 
   # List of projects that are allowed without licenses
   PROJECT_WHITELIST = [
-    "vendor/grammars/Sublime-Lasso",
-    "vendor/grammars/sublime-spintools",
-    "vendor/grammars/blitzmax"
+    "vendor/grammars/Sublime-Lasso",      # No license file
+    "vendor/grammars/blitzmax",           # No license file
+    "vendor/grammars/creole",             # License filename is not LICENSE(.*)?
   ].freeze
 
   HASH_WHITELIST = [
-    "bc12b3b4917eab9aedb87ec1305c2a4376e34fd1", # TextMate bundles
-    "16c4748566b3dd996594af0410a1875b22d3a2b3", # language-yaml and atom-salt
-    "ebae2d87e06d3acef075d049fcfc8958c0364863", # go-tmbundle
-    "ff21db2554d69d78b2220db5615b16bbba0788d3", # factor
-    "b9a7428fd036eed8503995e06e989180c276b17d", # jflex.tmbundle
+    "2edac46b0a63309c96442d2826321a442217472f", # Agda.tmbundle
+    "4da01d631a29c76456fd0bd16749c71e8d5f6dbf", # ant.tmbundle
+    "79e72fd673dcebadd8fbace8d43db3da96d2c09f", # bro-sublime
+    "220e011c8d686129e9c4163a7c655b9d64f61e59", # elixir-tmbundle
+    "75cf04a9121ca7bb5a9c122b33007ac016ba72e7", # factor
+    "b81acf2ba52d312754bf5055845a723123bda388", # FreeMarker.tmbundle
+    "ee77ce4cf9121bccc3e37ba6b98f8e7acd589aaf", # gap-tmbundle
+    "4cfc7ce12de920ccc836bbab2d748151d5ba7e38", # go-tmbundle
+    "6c2e34d62c08f97a3e2ece3eedc65fbd99873ff4", # idl.tmbundle
+    "e5212ae103917a9c2c3c1429a4569df466686fbd", # Isabelle.tmbundle
+    "bb56ce634fb7ddd38eee988c593ab7cb98a04f64", # jflex.tmbundle
+    "39f092c726491ca6a02354dbc6c3a0920bb44d4c", # mako-tmbundle
+    "7821982b18bc35d6925cc16ece68d9c71f1fbba3", # moonscript-tmbundle
+    "c235154dbf7864612ac0d337ef5fe79a586b061a", # PHP-Twig.tmbundle
+    "0c216b112f3a4e6d5848128504d8378d8c7eee00", # r.tmbundle
     "da39a3ee5e6b4b0d3255bfef95601890afd80709", # SCSS.tmbundle
-    "5f772ff20ddf3dbac1ec9b6a98c5aa50ace555b2", # gradle.tmbundle
-    "b5432a1e1055de7eeede2dddf91e009480651fd6", # jasmin-sublime
-    "74143c4d2a5649eb179105afcb37f466558c22ce", # language-clojure
-    "760471435f5ab0b9dc99a628203cd8f9156d28ce", # language-coffee-script
-    "94fbd554ec1837fb7c508fd7425326639c3f4103", # language-csharp
-    "70fb557a431891c2d634c33fa7367feab5066fd6", # language-javascript
-    "e0528c23cd967f999e058f1408ccb5b7237daaba", # language-python
-    "8653305b358375d0fced85dc24793b99919b11ef", # language-shellscript
-    "9f0c0b0926a18f5038e455e8df60221125fc3111", # elixir-tmbundle
-    "90af581219debd4e90ef041b46c294e8b4ae6d14", # mako-tmbundle
-    "b9b24778619dce325b651f0d77cbc72e7ae0b0a3", # Julia.tmbundle
-    "e06722add999e7428048abcc067cd85f1f7ca71c", # r.tmbundle
-    "50b14a0e3f03d7ca754dac42ffb33302b5882b78", # smalltalk-tmbundle
-    "eafbc4a2f283752858e6908907f3c0c90188785b", # gap-tmbundle
-    "1faa3a44cac6070f22384332434af37dfaaf2f70", # Stylus
-    "c87e7e574fca543941650e5b0a144b44c02c55d8", # language-crystal
-    "c78ec142ac3126cf639cfd67bd646ed8226d8b74", # atom-language-purescript
-    "341d7f66806fc41d081133d6e51ade856352e056", # FreeMarker.tmbundle
-    "15a394f6bc43400946570b299aee8ae264a1e3ff", # language-renpy
-    "8ccf886749c32fb7e65d4d1316a7ed0479c93dc9", # language-less
-    "2f03492b52d7dd83b4e7472f01b87c6121e5b1a4", # monkey
-    "241e5ddbb4423d792216783e9f668bd670b026e4", # ant.tmbundle
-    "bdab9fdc21e6790b479ccb5945b78bc0f6ce2493", # language-blade
-    "81711c69aa40135de7266c88b2f6ab28dbc1d81e", # atom-language-perl6
-    "808e27f5e44167113198d277f47926c5d482eac8", # atom-language-rust
-    "304be6184f7f344d44a1d13bddf511019624fd22", # language-css
+    "68539730d3cde34355f429f2267e265c1e030912", # smalltalk-tmbundle
+    "4b5f67a54532ca6e49ba44cd135a510a74712e07", # Stylus
+    "23d2538e33ce62d58abda2c039364b92f64ea6bc", # sublime-angelscript
+    "966085b715baa0b0b67b40924123f92f90acd0ba", # sublime-shen
+    "3df4ef028c6384b64bc59b8861d6c52093b2116d", # sublime-text-ox
+    "fd47e09f1fbdb3c26e2960d0aa2b8535bbc31188", # sublimetext-cuda-cpp
+    "93360925b1805be2b3f0a18e207649fcb524b991", # Std license in README.md of many TextMate grammars like abap.tmbundle
   ].freeze
 
   # List of allowed SPDX license names
@@ -90,34 +81,27 @@ class TestGrammars < Minitest::Test
       message << unlisted_submodules.sort.join("\n")
     end
 
-    assert nonexistent_submodules.empty? && unlisted_submodules.empty?, message
+    assert nonexistent_submodules.empty? && unlisted_submodules.empty?, message.sub(/\.\Z/, "")
   end
 
-  def test_local_scopes_are_in_sync
-    actual = YAML.load(`"#{File.join(ROOT, "script", "convert-grammars")}" --output - --no-install --no-remote`)
-    assert $?.success?, "script/convert-grammars failed"
-
-    # We're not checking remote grammars. That can take a long time and make CI
-    # flaky if network conditions are poor.
-    @grammars.delete_if { |k, v| k.start_with?("http:", "https:") }
-
-    @grammars.each do |k, v|
-      assert_equal v, actual[k], "The scopes listed for #{k} in grammars.yml don't match the scopes found in that repository"
-    end
+  def test_readme_file_is_in_sync
+    current_data = File.read("#{ROOT}/vendor/README.md").to_s.sub(/\A.+?<!--.+?-->\n/ms, "")
+    updated_data = `script/list-grammars --print`
+    assert_equal current_data, updated_data, "Grammar list is out-of-date. Run `script/list-grammars`"
   end
 
   def test_submodules_have_recognized_licenses
-    unrecognized = submodule_licenses.select { |k,v| v.nil? && Licensee::FSProject.new(k).license_file }
+    unrecognized = submodule_licenses.select { |k,v| v.nil? && Licensee.project(k).license_file }
     unrecognized.reject! { |k,v| PROJECT_WHITELIST.include?(k) }
     message = "The following submodules have unrecognized licenses:\n* #{unrecognized.keys.join("\n* ")}\n"
-    message << "Please ensure that the project's LICENSE file contains the full text of the license."
+    message << "Please ensure that the project's LICENSE file contains the full text of the license"
     assert_equal Hash.new, unrecognized, message
   end
 
   def test_submodules_have_licenses
     unlicensed = submodule_licenses.select { |k,v| v.nil? }.reject { |k,v| PROJECT_WHITELIST.include?(k) }
     message = "The following submodules don't have licenses:\n* #{unlicensed.keys.join("\n* ")}\n"
-    message << "Please ensure that the project has a LICENSE file, and that the LICENSE file contains the full text of the license."
+    message << "Please ensure that the project has a LICENSE file, and that the LICENSE file contains the full text of the license"
     assert_equal Hash.new, unlicensed, message
   end
 
@@ -127,14 +111,14 @@ class TestGrammars < Minitest::Test
                                                    HASH_WHITELIST.include?(v) }
                                    .map { |k,v| "#{k}: #{v}"}
     message = "The following submodules have unapproved licenses:\n* #{unapproved.join("\n* ")}\n"
-    message << "The license must be added to the LICENSE_WHITELIST in /test/test_grammars.rb once approved."
+    message << "The license must be added to the LICENSE_WHITELIST in /test/test_grammars.rb once approved"
     assert_equal [], unapproved, message
   end
 
   def test_whitelisted_submodules_dont_have_licenses
     licensed = submodule_licenses.reject { |k,v| v.nil? }.select { |k,v| PROJECT_WHITELIST.include?(k) }
     message = "The following whitelisted submodules have a license:\n* #{licensed.keys.join("\n* ")}\n"
-    message << "Please remove them from the project whitelist."
+    message << "Please remove them from the project whitelist"
     assert_equal Hash.new, licensed, message
   end
 
@@ -142,7 +126,7 @@ class TestGrammars < Minitest::Test
     used_hashes = submodule_licenses.values.reject { |v| v.nil? || LICENSE_WHITELIST.include?(v) }
     unused_hashes = HASH_WHITELIST - used_hashes
     message = "The following whitelisted license hashes are unused:\n* #{unused_hashes.join("\n* ")}\n"
-    message << "Please remove them from the hash whitelist."
+    message << "Please remove them from the hash whitelist"
     assert_equal Array.new, unused_hashes, message
   end
 
@@ -192,15 +176,22 @@ class TestGrammars < Minitest::Test
   # If the license is unrecognized, return its hash
   def submodule_license(submodule)
     # Prefer Licensee to detect a submodule's license
-    project = Licensee::FSProject.new(submodule, detect_readme: true)
-    return project.license.key if project.license
+    project = Licensee.project(submodule, detect_packages: true, detect_readme: true)
+    return project.license.key if project.licenses.length == 1 && !project.license.pseudo_license?
+
+    # If we have more than one license, return the first one that isn't a
+    # pseudo-license (other or no-license), if any
+    if project.licenses.length > 1
+      first_real_license = project.licenses.reject{ |f| f.pseudo_license? }.first
+      return first_real_license.key unless first_real_license.nil?
+    end
 
     # We know a license exists, but no method was able to recognize it.
     # We return the license hash in this case, to uniquely identify it.
     if project.license_file
-      return project.license_file.hash
+      return project.license_file.content_hash
     elsif project.readme
-      return project.readme.hash
+      return project.readme.content_hash
     end
   end
 end
